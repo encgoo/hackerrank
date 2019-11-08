@@ -39,7 +39,7 @@ not visited.
 
 #### How it works
 First pick a start node (or use the given one).
-
+![Dijkstr](images/Dijkstra.png)
 Initialize min_dis by setting the dis of this start node to be 0. This means this node is 0 from start. 
 
 Start a loop for n iteration, with n being the number of node.
