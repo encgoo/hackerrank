@@ -67,3 +67,35 @@ sorting the side that contains i. We don't need to worry about the
 other side. For example, if we are looking for the 5th largest, and
 the first pivot location returned is 10, then we just need to worry about [0:10]
 . [10:] is not relevant.
+
+## Examples
+### Lily's Homework
+[lily's homework](https://www.hackerrank.com/challenges/lilys-homework/problem) One
+important thing to realize is that when a list is sorted, the sum of 
+|arr[i] - arr[i-1]| is minimum. 
+With this in mind, this problem is essentially counting the swaps 
+we need to make the input list sorted.
+
+Two observations:
+1. When swapping ith and jth elements, all the rest won't be affected. 
+2. All the elements in the correct locations can be considred locked.
+As far as we don't swap anyone of them, they will stay in the correct locations.
+
+So we can find a convergent approach:
+Find an element in wrong location, swap it with the one in its correct location. If the swapped in one is good, then we 
+are done with this location. Otherwise swap the in-coming one to its
+correct location. Repeat this until this location is good.
+Keep on going until all elements are in the correct location.
+
+How to track the correct locations of each element? 
+
+Two tricks here:
+1. Instead of count the swaps to make the incoming list sorted, we 
+sort the list first, and then count the swaps we need to reverse it back
+to the original
+2. To track the location, we add an index to the list, and then sort it 
+using the value.
+![lilyhomework](images/lilyhomework.png)
+In this particular example, once we are done with i = 1, the whole
+list has been reversed back to the orginal. In general, this is not always
+true.
