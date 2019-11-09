@@ -54,7 +54,7 @@ Update the min_dis list for the nodes (node_e) of these edges.
 Note update only when the distance to node_e through node_s is
 smaller than the current value of node_e in min_dis.
 
-###1.3 Prim
+### 1.3 Prim
 Prim is used to find the MST. It is similar to Dijkstra, and the difference is 
 that Dijkstra is the min sum of distance from one node to all the others.
 Prim is the min sum of all edges.
@@ -64,7 +64,7 @@ we just use the distance between node_s and node_e.
 ![Prim](images/prim.png)
 
 
-###1.4 Kruskal
+### 1.4 Kruskal
 Kruskal is a variance of Union and Find. In Union and Find, we don't care about the order of 
 edges. We just need to hanle all edges.
 
@@ -75,8 +75,24 @@ weight, and then we handle them from low to high.
 Kruskal can do the same thing as Prim.
 ![Kruskal](images/kruskal.png)
 
-###1.5 BFS
-###1.6 DFS (in-order, pre-order, and post-order)
+### 1.5 BFS
+Use a queue to do BFS.
+
+Steps:
+* Initialize the deque with root node
+* do a while loop for non-empty deque
+* for each iteration, get the size of the deque. 
+* loop through this size
+* for each iteration, pop a node from deque. 
+* do whatever we need to do with this node.
+* push its children to the deque.
+
+### 1.6 DFS (in-order, pre-order, and post-order)
+Use recursive approach. Have a recursive method to handle a node.
+
+* in-order: call itself to handle the left child, then process its data, then call itself to handle the right child
+* pre-order: process its data first, then call itself to handle left child, call itself to handle the right child
+* post-order: call itself to handle the left, then right child. Then process its data.
 
 ## 2. Roads and Libraries
 Union and Find is used for this one, because all the roads carry the
