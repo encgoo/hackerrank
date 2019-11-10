@@ -22,10 +22,33 @@ def selection_sort(l):
 def bubble_sort(l):
     # also in place sort
     for i in range(len(l)):
-        for j in range(i, len(l) - 1 - i):
+        for j in range(0, len(l) - 1 - i):
             if l[j] > l[j + 1]:
                 # swap
                 l[j], l[j + 1] = l[j + 1], l[j]
+
+def insertion_sort(l):
+    # inplace
+    #
+    # First sort l[0]  and l[1]
+    #
+    if l[1] < l[0]:
+        l[0], l[1] = l[1], l[0]
+
+    for i in range(2, len(l)):
+        if l[i] < l[0]:
+            tmp = l[i]
+            l[1:i + 1] = l[:i]
+            l[0] = tmp
+        elif l[i] > l[i -1]:
+            pass
+        else:
+            for j in range(i - 1):
+                if l[j] < l[i] < l[j + 1]:
+                    tmp = l[i]
+                    l[j + 2: i + 1] = l[j + 1: i]
+                    l[j + 1] = tmp
+    return
 #
 #   Merge sort
 #
@@ -113,29 +136,36 @@ def quick_sort_rec(l, i, j):
     quick_sort_rec(l, pat + 1, j)
 
 if __name__ == "__main__":
-    l = [1, 0, 2, 9, 3, 8, 4, 8, 5, 7, 6, 100, 90, 80, 70, 60, 50, 40,30, 20]
+    l = [1, 0, 2, 9, 3, 8, 4, 8, 5, 7, 6, 100, 90, 80, 70, 60, 50, 40, 30, 20, 101, 99, 28,  35, 55, 75, 65, 85, 15, 25, 21, 51, 31, 91, 71, 81]
+    print("original list:")
     print(l)
     print("selection sort: ")
     tmp = l[:]
     t0 = time.time()
     selection_sort(tmp)
-    print("{}, {}".format(time.time() - t0, tmp))
+    print("%-25s %s"%(time.time() - t0, tmp))
 
     print("bubble sort:")
     tmp = l[:]
     t0 = time.time()
     bubble_sort(tmp)
-    print("{}, {}".format(time.time() - t0, tmp))
+    print("%-25s %s" % (time.time() - t0, tmp))
+
+    print("Insertion sort:")
+    tmp = l[:]
+    t0 = time.time()
+    insertion_sort(tmp)
+    print("%-25s %s" % (time.time() - t0, tmp))
 
     print("merge sort:")
     tmp = l[:]
     t0 = time.time()
     merge_sort_rec(tmp, 0, len(tmp) - 1)
-    print("{}, {}".format(time.time() - t0, tmp))
+    print("%-25s %s" % (time.time() - t0, tmp))
 
     print("quick sort:")
     tmp = l[:]
     t0 = time.time()
     quick_sort_rec(tmp, 0, len(tmp) - 1)
-    print("{}, {}".format(time.time() - t0, tmp))
+    print("%-25s %s" % (time.time() - t0, tmp))
 

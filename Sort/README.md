@@ -6,12 +6,26 @@ max. Swap it with the last one, _if_ it is smaller than the last one.
 Then look at the first n - 2 of them and find the max again. Swap with the 
 second to the last.
 ![Sort](images/sort.png)
+
+This is an O(N<sup>2</sup>) algorithm
+
 ## Bubble sort
 Compare 0 and 1, swap the bigger to 1. Then compare 1, and 2, swap the bigger
 to 2. Keep on doing this until the end of the list. This will bubble 
 the max to the end.
 Now start from 0 again and bubble the second biggest to the second
 last.
+
+It is an O(N<sup>2</sup>) algorithm.
+
+## Insertion sort
+Keep a sublist sorted, and expand it by inserting new cards in to the
+correct location one by one. 
+
+This algorithm is called stable, because for elements with the same
+value, we can keep their order.
+
+Also an O(N<sup>2</sup>) algorithm.
 
 ## Merge sort
 
