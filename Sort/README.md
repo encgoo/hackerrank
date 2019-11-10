@@ -130,5 +130,16 @@ This is then an O(N) _sorting_
 
 ### Fraudulent Activity Notifications
 [Fraudulen Activity Notifications](https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem)
+#### Approach 1
+* Use a list to keep d previous elements. 
+* Sort it and find median
+* Rebuild this list when move forward. Use binary search to find the item to remove and to 
+insert the new item
+
+This approach passes all but one Test case.
+
+#### Approach 2
+Note that the max expense is 200. Instead of sorting the list of d, use a list of 201 to store
+the expenses of d days. We don't need to sort then. This completes all the tests.
 
 [fraudulent_activity_notifications.py](fraudulent_activity_notifications.py)
