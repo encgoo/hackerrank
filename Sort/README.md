@@ -113,3 +113,15 @@ using the value.
 In this particular example, once we are done with i = 1, the whole
 list has been reversed back to the orginal. In general, this is not always
 true.
+
+### The Full Counting Sort
+This is not really a sorting problem. The items are all indexed properly,
+even though some indices are repeated. 
+So just create a list (ret) of string for length the same as arr.
+
+Go through arr. Use int(arr[0]) to access the ret above. 
+For the first half arr, append '- ' to ret[int(arr[0])]. For the second half
+of arr, append arr[i][1] to ret[int(arr[0])].
+This is then an O(N) _sorting_
+
+[full_counting_sort](full_counting_sort.py)
