@@ -115,7 +115,8 @@ list has been reversed back to the orginal. In general, this is not always
 true.
 
 ### The Full Counting Sort
-This is not really a sorting problem. The items are all indexed properly,
+[The Full Counting Sort](https://www.hackerrank.com/challenges/countingsort4/problem)
+is not really a sorting problem. The items are all indexed properly,
 even though some indices are repeated. 
 So just create a list (ret) of string for length the same as arr.
 
@@ -124,4 +125,9 @@ For the first half arr, append '- ' to ret[int(arr[0])]. For the second half
 of arr, append arr[i][1] to ret[int(arr[0])].
 This is then an O(N) _sorting_
 
-[full_counting_sort](full_counting_sort.py)
+[full_counting_sort.py](full_counting_sort.py)
+
+### Fraudulent Activity Notifications
+[Fraudulen Activity Notifications](https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem)
+
+[fraudulent_activity_notifications.py](fraudulent_activity_notifications.py)
