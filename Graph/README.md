@@ -122,5 +122,15 @@ Union and Find algorithm uses a list to store
  
 In the union method, also merge two clusters.
 
+Python [code](roads_and_libraries.py)
+
 ### 2.2 Even Tree
-DFS search. 
+DFS search is used for this [problem](https://www.hackerrank.com/challenges/even-tree/problem). Count number of sub-nodes at each node.
+Straightforward.
+Python [code](even_tree.py)
+
+### Prim's (MST): Special Subtree
+[This](https://www.hackerrank.com/challenges/primsmstsub/problem) can be solved
+by straightforward Prim's algorithm.
+
+Pytho [code](prims_special_subtree.py). 
