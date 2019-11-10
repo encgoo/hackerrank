@@ -94,9 +94,33 @@ Use recursive approach. Have a recursive method to handle a node.
 * pre-order: process its data first, then call itself to handle left child, call itself to handle the right child
 * post-order: call itself to handle the left, then right child. Then process its data.
 
-## 2. Roads and Libraries
-Union and Find is used for this one, because all the roads carry the
-same cost to repair
+## 2. Examples
+### 2.1 Roads and Libraries
+Union and Find is used for this [problem](https://www.hackerrank.com/challenges/torque-and-development/problem), because all the roads carry the
+same cost to repair.
 
-## 3. Even Tree
+There are n cities and m roads. Not all cities are connected 
+by roads. All roads are destroyed. 
+
+Need to decide which road the rebuild and where to build 
+libraries. Need to fulfil:
+* Any city needs to
+ have a library or be connected to a city with a library
+ 
+#### 2.1.1 Approach
+ Use Union and Find algorithm, because it can
+ detect connected cities. 
+ 
+ Assume that cities are grouped into clusters.
+ 
+#### 2.1.2 Implementation
+Union and Find algorithm uses a list to store 
+ connected nodes. 
+ On top of that, use a list of clusters to store number 
+ of roads and cities in each cluster, together with the
+ root city.
+ 
+In the union method, also merge two clusters.
+
+### 2.2 Even Tree
 DFS search. 
