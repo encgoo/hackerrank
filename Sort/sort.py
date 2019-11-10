@@ -169,3 +169,8 @@ if __name__ == "__main__":
     quick_sort_rec(tmp, 0, len(tmp) - 1)
     print("%-25s %s" % (time.time() - t0, tmp))
 
+    print("built-in sort:")
+    tmp = l[:]
+    t0 = time.time()
+    tmp.sort()
+    print("%-25s %s" % (time.time() - t0, tmp))

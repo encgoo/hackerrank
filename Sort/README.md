@@ -70,7 +70,8 @@ Python implementation of all four
 [sort.py](sort.py)
 
 ## Comparison
-![result](images/sort_results.png)
+![result](images/sort_results.png) The built-in sort of list out-performs all
+of the above.
 
 ## Trick
 Quick sort is good for finding the ith largest, because
