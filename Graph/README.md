@@ -129,7 +129,7 @@ DFS search is used for this [problem](https://www.hackerrank.com/challenges/even
 Straightforward.
 Python [code](even_tree.py)
 
-### Prim's (MST): Special Subtree
+### 2.3 Prim's (MST): Special Subtree
 [This](https://www.hackerrank.com/challenges/primsmstsub/problem) can be solved
 by straightforward Prim's algorithm.
 
