@@ -65,8 +65,8 @@ we just use the distance between node_s and node_e.
 
 
 ### 1.4 Kruskal
-Kruskal is a variance of Union and Find. In Union and Find, we don't care about the order of 
-edges. We just need to hanle all edges.
+Kruskal is a variance of Union and Find. In Union and Find, we don't care about the 
+order of edges. We just need to handle all the edges.
 
 For Kruskal, now we handle edges with weight. So we first sort the edges according to the
 weight, and then we handle them from low to high.
@@ -137,9 +137,10 @@ Python [code](prims_special_subtree.py).
 
 ### 2.4 Kruskal (MST): Really Special Subtree
 This [problem](https://www.hackerrank.com/challenges/kruskalmstrsub/problem) is just
-straight forward approach of Kruskal algorithm as discussed above.
+a straightforward approach of Kruskal algorithm as discussed above.
 
 Note that a line is missing in the framework code to output the result.
+
 ```fptr.write(str(res) + '\n')```
 
 Python [code](kruskal_mst_really_special_subtree.py)
