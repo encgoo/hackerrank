@@ -17,99 +17,85 @@ import sys
 #  4. 2D_INTEGER_ARRAY roads
 #
 
-def find_closest_with_road(record, visited):
+from collections import deque
+
+def can_update_neighbor(record, roads, index, mask, center_fish_types):
+    # all roads from/to this shop
+    rds = [r for r in roads if r[0] == index + 1 or r[1] == index + 1]
+    can_update = False
+    for r in rds:
+        neighbor = r[0] if r[1] == index + 1 else r[1]
+        neighbor_mask = center_fish_types[neighbor - 1]
+        new_mask = mask | neighbor_mask
+        if record[neighbor - 1][new_mask] > record[index][mask] + r[2]:
+            can_update = True
+            break
+
+    return can_update
+
+
+def find_closest_with_road(record, roads, center_fish_types):
     min_dis = sys.maxsize
     ret_index = -1
     ret_k_index = -1
     for index in range(len(record)):
-        for k_index in range(len(record[0])):
-            if visited[index][k_index] is False:
-                if record[index][k_index] < min_dis:
-                    min_dis = record[index][k_index]
+        for mask in range(len(record[0])):
+            #
+            #   Make sure this node can cause update on neighbors.
+            #
+            if can_update_neighbor(record, roads, index, mask, center_fish_types):
+                if record[index][mask] < min_dis:
+                    min_dis = record[index][mask]
                     ret_index = index
-                    ret_k_index = k_index
+                    ret_k_index = mask
+                    break
 
     return ret_index, ret_k_index
 
 
-def find_min_path(complete_path, k):
-    # filter out all the paths that can be alone
-    single_paths= [p for p in complete_path if max(p[0]) < sys.maxsize]
-    min_cost = sys.maxsize
-    for p in single_paths:
-        min_cost = min(min_cost, max(p[0]) + p[1])
-
-    other_paths = [p for p in complete_path if max(p[0]) == sys.maxsize]
-
-    # Since we have two cats, we look for two paths from all these
-    for i in range(len(other_paths)):
-        for j in range(i + 1, len(other_paths)):
-            merge = list(map(min, zip(other_paths[i][0], other_paths[j][0])))
-            if max(merge) < sys.maxsize:
-                # This is a possible solution
-                p1 = max(other_paths[i][0]) + other_paths[i][1]
-                p2 = max(other_paths[j][0]) + other_paths[j][1]
-                min_cost = min(min_cost, min(p1, p2))
-
-    return min_cost
-
-def is_completed(visited):
-    for i in range(len(visited)):
-        for j in range(len(visited[0])):
-            if visited[i][j] is False:
-                return False
-
-    return True
 def shop(n, k, centers, roads):
 
     # Write your code here
-    # keep track the distance and the fish types so far for each node
-    record = [[sys.maxsize] * (k + 1) for i in range(n)]
-    # visited shall be k favors as well
-    visited = [[False] * (k + 1) for i in range(n)]
+    # keep track the distance and the fish type combinations so far for each node
+    record = [[sys.maxsize] * (2**k) for i in range(n)]
 
     center_fish_types = []
     for c in centers:
         fish_types = list(map(int, c.split()))
-        center_fish_types.append(fish_types[1:])
+        fish_type_mask = 0
+        for j in range(1, fish_types[0] + 1):
+            fish_type_mask |= 1 << fish_types[j] - 1
+        center_fish_types.append(fish_type_mask)
 
     #
     # Since Dijkstra/greedy algorithm is using, we can get the min
     #
 
     # initialize the start node
-    fish_types = center_fish_types[0]
-    if len(fish_types) == 0:
-        # allow no fish type to propagate
-        record[0][0] = 0
-    else:
-        # don't allow no fish type to propagate
-        for ii in range(n):
-            visited[ii][0] = True
-        for ii in fish_types:
-            record[0][ii] = 0
-
-    complete_path = []
-    while is_completed(visited) is False:
-        node_index, k_index = find_closest_with_road(record, visited)
+    record[0][center_fish_types[0]] = 0
+    # find_closest_with_road is going to check if there is any more
+    # node to update
+    while True:
+        node_index, mask = find_closest_with_road(record, roads, center_fish_types)
+        if node_index == -1:
+            break
         rds = [r for r in roads if r[0] == node_index + 1 or r[1] == node_index + 1]
-        visited[node_index][k_index] = True
+
         for r in rds:
             # update a node this can reach
             a_node = r[0] if r[1] == node_index + 1 else r[1]
-            a_node_fish_types = center_fish_types[a_node - 1]
+            current_center_mask = center_fish_types[a_node - 1]
+            next_mask = mask | current_center_mask
+            record[a_node - 1][next_mask] = min(record[a_node - 1][next_mask], record[node_index][mask] + r[2])
 
-            record[a_node - 1][k_index] = min(record[a_node - 1][k_index], record[node_index][k_index] + r[2])
 
-            for t in a_node_fish_types:
-                record[a_node - 1][t] = min(record[node_index][k_index] + r[2], record[a_node - 1][t])
+    best_time = sys.maxsize
+    for i in range(len(record[0])):
+        for j in range(len(record[0])):
+            if i|j == 2**k -1:
+                best_time = min(best_time, max(record[n - 1][i], record[n-1][j]))
 
-            # check if this node is completed
-            if (a_node == n):
-                # Reach n, store the result
-                complete_path.append((record[node_index][:], r[2]))
-
-    return max(record[n - 1][1:])
+    return best_time
 
 if __name__ == '__main__':
     with open("ss_data.txt", "r") as infile:
