@@ -134,3 +134,12 @@ Python [code](even_tree.py)
 by straightforward Prim's algorithm.
 
 Python [code](prims_special_subtree.py). 
+
+### 2.4 Kruskal (MST): Really Special Subtree
+This [problem](https://www.hackerrank.com/challenges/kruskalmstrsub/problem) is just
+straight forward approach of Kruskal algorithm as discussed above.
+
+Note that a line is missing in the framework code to output the result.
+```fptr.write(str(res) + '\n')```
+
+Python [code](kruskal_mst_really_special_subtree.py)
