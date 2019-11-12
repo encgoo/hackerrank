@@ -66,7 +66,7 @@ Then it calls itself to handle the sublist from start to pivot, and from
 pivot to the end.
 
 ## code
-Python implementation of all four
+Python implementation of all five:
 [sort.py](sort.py)
 
 ## Comparison

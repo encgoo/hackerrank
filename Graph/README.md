@@ -133,4 +133,4 @@ Python [code](even_tree.py)
 [This](https://www.hackerrank.com/challenges/primsmstsub/problem) can be solved
 by straightforward Prim's algorithm.
 
-Pytho [code](prims_special_subtree.py). 
+Python [code](prims_special_subtree.py). 
