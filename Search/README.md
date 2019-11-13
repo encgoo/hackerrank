@@ -1,5 +1,9 @@
 # Search
 Not sure why search is in a separated category for hackerrank.
+Useful tricks:
+* Add index to list items, and then sort, using item value. This trick can
+be used to figure out how many swaps/insertions needed for sorting a given
+list.
 
 ## Hackerland radio transmitters
 

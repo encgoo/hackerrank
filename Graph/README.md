@@ -186,6 +186,11 @@ This [problem](https://www.hackerrank.com/challenges/clique/problem) has to use 
 
 Python [code](clique.py)
 
+### 2.7 Jeanie's Route
+This [problem](https://www.hackerrank.com/challenges/jeanies-route/problem) is quite complex. 
+There are still some corner cases to clean up.
+Still missing Test case 2, 3, 9, 10, 13
 
+Python [code](jeanies_route.py)
 
 
