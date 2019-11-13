@@ -144,3 +144,41 @@ Note that a line is missing in the framework code to output the result.
 ```fptr.write(str(res) + '\n')```
 
 Python [code](kruskal_mst_really_special_subtree.py)
+
+### 2.5 Minimum Penalty Path
+For this [problem](https://www.hackerrank.com/challenges/beautiful-path/problem), a variant
+of Dijkstra algorithm is used.
+
+Instead of only one flag for a node to store the information whether it has been visited, 
+we now use multiple flags, to allow more than one value to propagate through this node.
+#### Approach 1
+Use an open end list for this. Just append whatever value pass through this node to it.
+Then each time, we check if a new value already exists. If so, don't append. This approach 
+works but has performance issue.
+#### Approach 2
+Note that max(C<sub>i</sub>) is 1024, so whatever C<sub>i</sub> OR C<sub>j</sub> OR C<sub>k</sub>, 
+the 2048 bit will never get set. So for each node, at most 2048 different values can 
+pass through. So we use 
+```
+visited = [[False]*2048 for i in range(n)]
+```
+to store the information
+
+Now the rest is straightforward. 
+
+* Create a deque to store the nodes we need to handle. Need to store the node and the cost 
+it will propagate.
+* Put A into the deque. Set 
+```buildoutcfg
+visited[A - 1][0] = True
+```
+* do a while loop to process all the nodes in the queue
+* for each iteration, pop a node and its cost from the queue
+* use the edges to find all the neighbors
+* use its node and cost to propagate the edge to the next node
+* check if this value has already been propagate to the neighbor or not
+* if not, update visited, and add neighbor to queue.
+
+Python [code](minimum_penalty_path.py)
+
+
