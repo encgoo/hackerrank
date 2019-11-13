@@ -181,4 +181,11 @@ visited[A - 1][0] = True
 
 Python [code](minimum_penalty_path.py)
 
+### 2.6 Clique
+This [problem](https://www.hackerrank.com/challenges/clique/problem) has to use this [algorithm](https://en.wikipedia.org/wiki/Tur%C3%A1n_graph)
+
+Python [code](clique.py)
+
+
+
 
