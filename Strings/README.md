@@ -10,3 +10,7 @@ Several useful tricks of python
 ### Bear and Steady Gene
 This [problem](https://www.hackerrank.com/challenges/bear-and-steady-gene/problem) is solved
 using this python [code](bear_and_steady_gene.py).
+
+### Sherlock and Anagrams
+This [problem](https://www.hackerrank.com/challenges/sherlock-and-anagrams) can be solved by
+this python [code](sherlock_and_anagrams.py)
