@@ -188,8 +188,14 @@ Python [code](clique.py)
 
 ### 2.7 Jeanie's Route
 This [problem](https://www.hackerrank.com/challenges/jeanies-route/problem) is quite complex. 
-There are still some corner cases to clean up.
-Still missing Test case 2, 3, 9, 10, 13
+
+Key steps:
+* Clean up the tree by make it minimum but still connect all the cities Jeanie needs to
+deliver letters to. In this step, city 5 of the example given in the problem will be removed, 
+because after that city 1, 3, and 4 are still connected.
+* Pick a city and find the city a that is furthest away from it.
+* Use city a to find the furthest city, and compute the distance.
+* Sum up all the remaining path costs, times 2 and then substract the distance we get above.
 
 Python [code](jeanies_route.py)
 

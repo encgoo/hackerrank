@@ -50,14 +50,20 @@ def jeanisRoute(k, roads, cities, n):
     print(roads_keep)
     # Step 2. Figure out the longest distance between any two
     # nodes in cities
-    end_city, _ = longest_distance(cities[0], roads_keep, n)
+    # pick a city that we still keep
+    start = [i for i in range(n) if connected_node[i]][0]
+    end_city, _ = longest_distance(start, roads_keep, n)
     _, longest = longest_distance(end_city, roads_keep, n)
 
     total_length = sum(sum(r[1] for r in city_roads) for city_roads in roads_keep)
 
     return total_length - longest
 
+
 def longest_distance(start, roads_keep, n):
+    #
+    #   Given a start, find the city that is furthest away.
+    #
     end_city = start
     longest_distance = 0
     visited = [False]*n
