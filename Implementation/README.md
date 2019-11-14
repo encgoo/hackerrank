@@ -4,6 +4,6 @@
 [Climbing the leaderboard](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem) is straightforward.
 [code](climbing_the_leaderboard.py)
 
-## 3D Surface Are
+## 3D Surface Area
 This [problem](https://www.hackerrank.com/challenges/3d-surface-area/problem) can be solved 
 by this python [code](3d_surface_area.py)
