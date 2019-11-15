@@ -14,3 +14,9 @@ using this python [code](bear_and_steady_gene.py).
 ### Sherlock and Anagrams
 This [problem](https://www.hackerrank.com/challenges/sherlock-and-anagrams) can be solved by
 this python [code](sherlock_and_anagrams.py)
+
+### Sherlock and valid string
+This [problem](https://www.hackerrank.com/challenges/sherlock-and-valid-string/problem) can
+by solved by using char_count mentioned before in the tricks. 
+
+Python [code](sherlock_and_valid_string.py)
