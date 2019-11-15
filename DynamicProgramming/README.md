@@ -33,7 +33,7 @@ This [problem](https://www.hackerrank.com/challenges/sherlock-and-cost/problem) 
 be solved by tabulation approach.
 Python [code](sherlock_and_cost.py)
 
-### Sam and substring
+### Sam and Substring
 Two approaches for this [problem](https://www.hackerrank.com/challenges/sam-and-substrings/problem).
 * Brute force approach
 Two for loops. One for length of substring from 1 to len(n) + 1. The inside for loop for start
