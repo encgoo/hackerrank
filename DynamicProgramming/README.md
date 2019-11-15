@@ -40,5 +40,20 @@ Two for loops. One for length of substring from 1 to len(n) + 1. The inside for 
 from 0 to  len(n) - l + 1. Inside this loop take a substring:
 ```n[start:start + 1]```
 This approach works, but has performance issue when n is large
-* Smarter approach
-Python [code]()
+* Smarter approach: python [code]()
+
+### Abbreviation
+#### Approach 1
+Use recursion. There are repeated sub-problems. 
+#### Approach 2: 
+Use DP. 
+Draw a 2D table
+
+| |_|d|a|B|c|d|
+|---|---|---|---|---|---|---|
+|_|1 |1 | 0|0 |0 |0 |
+|A|0 |0 |1 |0|0 |0 |
+|B|0 |0 |0 |1 |0 |0 |
+|C|0 |0 |0 |0 |1 |1 |
+
+Python [code](abbreviation.py)
