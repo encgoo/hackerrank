@@ -1,6 +1,6 @@
 # <font color="rgb(58, 167, 60)">Hackerrank</font>
 
-Coding practice of hackerrank.com
+Coding practice of <font color="rgb(58, 167, 60)">hackerrank.com</font>
 
 Mainly focus on medium and some hard problems
 
