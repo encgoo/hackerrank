@@ -1,6 +1,6 @@
 # &#x1F34F;Hackerrank
 
-Coding practice of &#x1F34F;hackerrank.com&#x1F34F;
+Coding practice of hackerrank.com
 
 Mainly focus on medium and some hard problems
 
