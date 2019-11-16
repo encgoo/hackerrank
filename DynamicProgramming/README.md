@@ -57,3 +57,31 @@ Draw a 2D table
 |C|0 |0 |0 |0 |1 |1 |
 
 Python [code](abbreviation.py)
+
+### The Indian Job
+### Approach 1
+Use recursion. Then this is a O(2<sup>N</sup>).
+### Approach 2
+Use DP tabulation. Create a 2D matrix
+```buildoutcfg
+max_holding = [[0]*(N+1) for i in range(G + 1)]
+```
+Here
+```max_holding[i][j]``` holds the information about when g = j, the maximum
+time can be put into j, when there are ```arr[0], ..., arr[i]```
+
+Example:
+```buildoutcfg
+4, 7
+5, 2, 3, 4
+```
+| |0|1|2|3|4|5|6|7|
+|---|---|---|---|---|---|---|---|---|
+|0|0|0|0|0|0|0|0|0|
+|5|0|0|0|0|0|5|5|5|
+|2|0|0|2|2|2|5|5|7|
+|4|0|0|2|2|4|5|6|7|
+|3|0|0|2|3|4|5|6|7|
+
+Python [code](the_indian_job.py)
+
