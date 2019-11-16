@@ -114,3 +114,17 @@ The whole table is
 |3|1|1|2|3|4|
 
 Python [code](coin_change.py) 
+
+### 2.8 The Maximum Subarray
+We need to compute max of subsequence and subarray for this [problem](https://www.hackerrank.com/challenges/maxsubarray/problem)
+
+First of all, since empty subsequence or empty sybaray is not allowed, we 
+are going to handle these two cases separately.
+1. If all elements are negative (or say the max is negative), the subsequence and the 
+subarray with max sum are the same
+```[max]```
+2. If there are at least 1 positive element, the sum for subsequence is simple.
+Just sum all the positive elements.
+To get the max subarray, we need to use [Kadane's algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane.27s_algorithm)
+
+Python [code](the_maximum_subarray.py)
