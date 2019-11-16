@@ -59,6 +59,7 @@ Draw a 2D table
 Python [code](abbreviation.py)
 
 ### The Indian Job
+
 ### Approach 1
 Use recursion. Then this is a O(2<sup>N</sup>).
 ### Approach 2
@@ -85,3 +86,31 @@ Example:
 
 Python [code](the_indian_job.py)
 
+### Coin Change
+This [problem](https://www.hackerrank.com/challenges/coin-change/problem) is similar to "The Indian Job" above. 
+
+The keypoint of using DP tabulation is to figure out what information to hold.
+Again a 2D matrix
+```buildoutcfg
+max_ways[[0]*(n + 1) for _ in range(len(c) + 1)]
+```
+Here```max_ways[i][j]``` holds the information when n = j, the maximum ways of different
+changes given only ```c[0],...,c[i - 1]``` coins are given.
+
+Example:
+```
+4,3
+1,2,3
+```
+Then ```max_ways[2][3]``` means n = 3, and coins are (1,2). So to make 3 using
+only two kinds of coins (1,2) we can have 2 ways {1,1,1}, {1, 2}
+
+The whole table is
+
+| |0|1|2|3|4|
+|---|---|---|---|---|---|
+|1|1|1 |1 |1 |1 |
+|2|1|1|2|2|3|
+|3|1|1|2|3|4|
+
+Python [code](coin_change.py) 
