@@ -59,7 +59,7 @@ Draw a 2D table
 Python [code](abbreviation.py)
 
 ### The Indian Job
-
+Two possible approaches for this [problem](https://www.hackerrank.com/challenges/the-indian-job/problem)
 ### Approach 1
 Use recursion. Then this is a O(2<sup>N</sup>).
 ### Approach 2
