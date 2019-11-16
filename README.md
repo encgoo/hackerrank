@@ -1,4 +1,5 @@
-# hackerrank
+# <font color="rgb(58, 167, 60)">Hackerrank</font>
+
 Coding practice of hackerrank.com
 
 Mainly focus on medium and some hard problems
