@@ -128,3 +128,35 @@ Just sum all the positive elements.
 To get the max subarray, we need to use [Kadane's algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane.27s_algorithm)
 
 Python [code](the_maximum_subarray.py)
+
+### 2.9 Knapsack 
+This [problem](https://www.hackerrank.com/challenges/unbounded-knapsack/problem) is 
+very similar to 2.7 Coin Change above. 
+
+Use a 2D table. The horizontal axis is ```k```, for the target sum.
+The vertical axis for ```arr[i]```. The first row, means using none from ```arr```
+The second row means using only ```arr[0]```. The third row means using```arr[0], and arr[1]```
+
+Example:
+```buildoutcfg
+3 10
+2 3 4
+```
+| |0|1|2|3|4|5|6|7|8|9|10|
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| |0|0|0|0|0|0|0|0|0|0|0|
+|2|0|0|2|2|4|4|6|6|8|8|10|
+|3|0|0|2|3|4|5|6|7|8|_9_|10|
+|4|0|0|2|3|4|5|6|7|8|9|10|
+Explanation:
+To get the value 9 (the _italic_ font one) of the third row of the above table, 10th column, we are going through these steps:
+* First, check the one in the above row. If the one there is the same as k, then we
+have nothing to do. Just copy it down. This is not the case here. It means without the new
+arr[1]=3, using currently available, the best is only 8, not 9 yet. So we want to check
+if the newly available 3 can make things better.
+
+* Using the data of the above row, move back 3 (for k = 6). See if add a 3 there can make 
+things better. It is a 6 there. So adding a 3 will make it a 9. 9 is better than 8. So we
+can keep it. We can move back 3 more to check, until to the end of the above row in general. 
+
+Python [code](knapsack.py)  
