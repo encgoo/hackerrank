@@ -148,6 +148,8 @@ Example:
 |2|0|0|2|2|4|4|6|6|8|8|10|
 |3|0|0|2|3|4|5|6|7|8|_9_|10|
 |4|0|0|2|3|4|5|6|7|8|9|10|
+
+
 Explanation:
 To get the value 9 (the _italic_ font one) of the third row of the above table, 10th column, we are going through these steps:
 * First, check the one in the above row. If the one there is the same as k, then we
