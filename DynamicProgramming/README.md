@@ -165,12 +165,14 @@ Python [code](knapsack.py)
 
 ### 2.10 Bricks Game
 
-This [problem](https://www.hackerrank.com/challenges/play-game/problem) is typical one
-for using tabulation of Dynamic Programming. This shows clearly the strength of DP.
+This [problem](https://www.hackerrank.com/challenges/play-game/problem) is a typical one
+for using tabulation of Dynamic Programming. This shows clearly the strength of DP over recursion. 
+Just compare the following.
 
-For a top down approach, we can use recursion. But there are just way too many choices/paths to explore. 
+For a top down approach, we can use recursion. Then for each step, each user can 
+have 3 choices. The total count of path grows up exponentially as O(3<sup>3</sup). 
 
-From bottom up, using tabulation of DP, it is easy to build up the optimal path. Say for example, give a list of 
+On the other hand, a bottom up approach using tabulation of DP, it is easy to build up the optimal path. Say for example, give a list of 
 bricks, if a player is facing the last in the list, there is no other choice but to take
 it. 
 
