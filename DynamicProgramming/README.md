@@ -165,12 +165,12 @@ Python [code](knapsack.py)
 
 ### 2.10 Bricks Game
 
-This [problem](https://www.hackerrank.com/challenges/play-game/problem) is typical 
-for using tabulation of Dynamic Programming. 
+This [problem](https://www.hackerrank.com/challenges/play-game/problem) is typical one
+for using tabulation of Dynamic Programming. This shows clearly the strength of DP.
 
-From top down, there are just way too many choices/paths to explore. 
+For a top down approach, we can use recursion. But there are just way too many choices/paths to explore. 
 
-But from buttom up, it is easy to build up the path. Say for example, give a list of 
+From bottom up, using tabulation of DP, it is easy to build up the optimal path. Say for example, give a list of 
 bricks, if a player is facing the last in the list, there is no other choice but to take
 it. 
 
@@ -187,9 +187,9 @@ The list ```best_choice``` looks like this
 ```buildoutcfg
 [(6,1), (9, 3), (12, 3), (9,2), (5,1)] 
 ```
-The second element (9,3) means if a user starts at the second of ```arr```, he shall choice
-to remove 3 bricks, and he will eventually get 9.
+The second element (9,3) means if a user starts at the second of ```arr```, 
+he shall choose to remove 3 bricks, and he will eventually get a score of 9.
 
 We just need to build this list from right to left.
 
-Python [cde](bricks_game.py)
+Python [code](bricks_game.py)
