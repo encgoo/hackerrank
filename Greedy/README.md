@@ -11,3 +11,7 @@ just need to sort the list first, and then look for the min diff between
 k elements.
 
 Python [code](max_min.py)
+
+## Goodland Electricity
+This [problem](https://www.hackerrank.com/challenges/pylons/problem) can be 
+solved by this python [code](goodland_electricity.py)
