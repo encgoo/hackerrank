@@ -162,3 +162,34 @@ things better. It is a 6 there. So adding a 3 will make it a 9. 9 is better than
 can keep it. We can move back 3 more to check, until to the end of the above row in general. 
 
 Python [code](knapsack.py)  
+
+### 2.10 Bricks Game
+
+This [problem](https://www.hackerrank.com/challenges/play-game/problem) is typical 
+for using tabulation of Dynamic Programming. 
+
+From top down, there are just way too many choices/paths to explore. 
+
+But from buttom up, it is easy to build up the path. Say for example, give a list of 
+bricks, if a player is facing the last in the list, there is no other choice but to take
+it. 
+
+So we use a list ```best_choice``` to store at each pos of the incoming list the best a player can get, and 
+the steps he/she will take.
+
+Example:
+```buildoutcfg
+5
+1 2 3 4 5
+```
+
+The list ```best_choice``` looks like this
+```buildoutcfg
+[(6,1), (9, 3), (12, 3), (9,2), (5,1)] 
+```
+The second element (9,3) means if a user starts at the second of ```arr```, he shall choice
+to remove 3 bricks, and he will eventually get 9.
+
+We just need to build this list from right to left.
+
+Python [cde](bricks_game.py)
