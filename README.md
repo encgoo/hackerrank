@@ -40,7 +40,13 @@ Contains a [summary](Graph/README.md) of the following algorithms:
 4 medium problems [here](Search)
 
 ## &#x1F4D7;Sort
-Check the summary of 5 basic sorting algorithms implemented [there](Sort/sort.py)
+Check the summary of the following 5 basic sorting 
+algorithms implemented [there](Sort/sort.py):
+* Selection sort
+* bubble sort
+* insertion sort
+* quick sort
+* merge sort
 
 3 (all) medium problems can be found [here](Sort).
 
