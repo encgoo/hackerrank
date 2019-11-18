@@ -28,7 +28,7 @@ Contains a [summary](Graph/README.md) of the following algorithms:
 8 medium problems can be found [here](Graph)
 
 ## &#x1F4D7;Greedy
-4 medium problems [here](Greedy)
+5 (all) medium problems [here](Greedy)
 
 ## &#x1F4D7;Implementation
 10 medium problems [here](Implementation)

@@ -24,3 +24,13 @@ solved by this python [code](goodland_electricity.py)
  * Now hanlde two sorted list according to its location
  
  Python [code](cloudy_day.py)
+ 
+ ## Candies
+ This [problem](https://www.hackerrank.com/challenges/candies/problem) can
+ be solved by scanning from left to right, and then back from 
+ right to left. Start with one candy for the first kid. Implement
+ by one if the next kid has a higher score, otherwise reset 
+ to 1.
+ The right to left scan takes the _max_ of both scan result.
+ 
+ Python [code](candies.py)
