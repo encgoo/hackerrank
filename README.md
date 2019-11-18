@@ -5,7 +5,7 @@ Coding practice of hackerrank.com
 Mainly focus on medium and some hard problems
 
 ## &#x1F4D7;Bit Manipulation
-1 medium problem [here](BitManipulation)
+2 medium problems [here](BitManipulation)
 
 ## &#x1F4D7;Constructive Algorithm
 2 medium problems [here](ConstructiveAlgorithms)

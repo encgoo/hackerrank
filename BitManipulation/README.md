@@ -5,3 +5,7 @@
 ## Counter Game
 This [problem](https://www.hackerrank.com/challenges/counter-game/problem) is solved by
 this python [code](counter_game.py) 
+
+## Cipher
+This [problem](https://www.hackerrank.com/challenges/cipher/problem) is solved
+by this python [code](cipher.py)
