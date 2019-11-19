@@ -1,6 +1,6 @@
 # &#x1F34F;Hackerrank
 
-Coding practice of hackerrank.com
+Coding practice of hackerrank.com, using python and C++.
 
 Mainly focus on medium and some hard problems
 
@@ -31,7 +31,7 @@ Contains a [summary](Graph/README.md) of the following algorithms:
 5 (all) medium problems [here](Greedy)
 
 ## &#x1F4D7;Implementation
-10 medium problems [here](Implementation)
+12 medium problems [here](Implementation)
 
 ## &#x1F4D7;Recursion
 3 medium problems [here](Recursion)
