@@ -7,3 +7,7 @@
 ## 3D Surface Area
 This [problem](https://www.hackerrank.com/challenges/3d-surface-area/problem) can be solved 
 by this python [code](3d_surface_area.py)
+
+## Forming a Magic Square
+This [problem](https://www.hackerrank.com/challenges/magic-square-forming/problem) can be solved
+by this C++ [code](magic_square_forming.cpp)
