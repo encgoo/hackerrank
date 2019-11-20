@@ -209,3 +209,18 @@ extra optimization needed.
 Convert the list of edges (adjacent list representation) to
 list of connected nodes (adjacent matrix representation)
 
+### 2.9 Jack goest to Rapture
+This [problem](https://www.hackerrank.com/challenges/jack-goes-to-rapture/problem) can 
+be solved by a variance of Dijkstra algorithm.
+
+Use a deque to store the stations to handle. Initialize it with
+the start station.
+
+Use a list to store the lowest cost ```lowest_cost```to each station.
+
+Use a while loop to loop through the q. For each iteration, pop a station from 
+the q, and update all the stations it connects to, if
+the cost is lower than the ```lowerst cost``` of it so far. If so
+update ```lowest cost``` of it and add it to the queue.
+
+Python [code]()
