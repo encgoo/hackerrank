@@ -27,17 +27,20 @@ This algorithm can be used to detect cycle, or to filter out
 cycle(s), as shown in the example (Roads and Libraries) below.
 
 ### 1.2 Dijkstra
-#### 1.2.1 Internal Data Structure
+There are two different implementations of Dijkstra algorithm.
+
+####  1.2.1 Implementation 1
+##### 1.2.1.1 Internal Data Structure
 Two lists, each of size of nodes.
 First list (visited) store information whether a node has been visited. 
 
 The second list (min_dis) stores the minimum distance (so far) to the start node. Initialize even thing to -1.
 
-#### 1.2.2 Useful method
+##### 1.2.1.2 Useful method
 Find the node with the minimum dis to start, provided it is 
 not visited. 
 
-#### 1.2.3 How it works
+#### #1.2.1.3 How it works
 First pick a start node (or use the given one).
 ![Dijkstr](images/Dijkstra.png)
 
@@ -53,6 +56,42 @@ Find all the edges that contains this node as start
 Update the min_dis list for the nodes (node_e) of these edges.
 Note update only when the distance to node_e through node_s is
 smaller than the current value of node_e in min_dis.
+
+#### 1.2.2 Implementation 2
+Use a queue and a list
+##### 1.2.2.1 Data structure
+A list of size of number of nodes to store the closest distance
+to the corresponding node ```closest_dist```.
+A queue to store the next nodes to process. 
+#### 1.2.2.2 How it works
+Steps:
+
+* Initialize the queue with the start node. Initialize ```closest_dist``` of the
+start node to 0.
+* Use a while loop to handle all the nodes in the queue
+    * For each iteration, pop a node ```n1``` from the q
+    * Find all the nodes this node can connect to directly
+    * Use a for loop to loop through all these nodes
+        * for each ```n2``` compute the distance ```d2```to this node 
+        using ```closest_dist[n1]``` plus distance from ```n1``` to ```n2```
+        * _important_. Now check if ```d2``` is smaller than```clostest_dist[n2```. if so
+        update ```clost_dist[n1``` and append ```d2``` to the q
+        
+#### Variance
+Implementation 1 and 2 above can be use to find the MST. 
+
+Implementation 2 is more flexible in the sense it can handle some
+variance of MST. 
+
+Here MST only depends on the lowest cost of each node.
+Example like 2.5 below, the answer depends on more than
+just the lowest cost. We can just expand the ```closest_dist``` to store
+a list, instead of just a single minimum cost. Then in the 
+for loop, we update ```clost_dist``` and the q only if d2 is not already
+in the list ```clost_dist[n2]```.
+
+
+
 
 ### 1.3 Prim
 Prim is used to find the MST. It is similar to Dijkstra, and the difference is 
@@ -169,7 +208,7 @@ Now the rest is straightforward.
 * Create a deque to store the nodes we need to handle. Need to store the node and the cost 
 it will propagate.
 * Put A into the deque. Set 
-```buildoutcfg
+```
 visited[A - 1][0] = True
 ```
 * do a while loop to process all the nodes in the queue
