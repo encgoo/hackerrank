@@ -199,4 +199,13 @@ because after that city 1, 3, and 4 are still connected.
 
 Python [code](jeanies_route.py)
 
+### 2.8 Breadth First Search: Shortest Reach
+This [problem](https://www.hackerrank.com/challenges/bfsshortreach/problem) is
+a straightforward application of BFS.
+
+For python [implementation](breadth_first_search_shortest_reach.py), only one
+extra optimization needed.
+
+Convert the list of edges (adjacent list representation) to
+list of connected nodes (adjacent matrix representation)
 
