@@ -19,38 +19,17 @@ import sys
 
 from collections import deque
 
-def can_update_neighbor(record, roads, index, mask, center_fish_types):
-    # all roads from/to this shop
-    rds = [r for r in roads if r[0] == index + 1 or r[1] == index + 1]
-    can_update = False
-    for r in rds:
-        neighbor = r[0] if r[1] == index + 1 else r[1]
-        neighbor_mask = center_fish_types[neighbor - 1]
-        new_mask = mask | neighbor_mask
-        if record[neighbor - 1][new_mask] > record[index][mask] + r[2]:
-            can_update = True
-            break
+def add_to_queue(q, record, index, mask, min_dist):
+    old_dist = record[index][mask]
+    if old_dist < min_dist:
+        # this new update is worse than the one in record. No need to add to the q
+        return
+    old_q_item = (index, mask, old_dist)
+    if old_q_item in q:
+        q.remove((index, mask, old_dist))
 
-    return can_update
-
-
-def find_closest_with_road(record, roads, center_fish_types):
-    min_dis = sys.maxsize
-    ret_index = -1
-    ret_k_index = -1
-    for index in range(len(record)):
-        for mask in range(len(record[0])):
-            #
-            #   Make sure this node can cause update on neighbors.
-            #
-            if can_update_neighbor(record, roads, index, mask, center_fish_types):
-                if record[index][mask] < min_dis:
-                    min_dis = record[index][mask]
-                    ret_index = index
-                    ret_k_index = mask
-                    break
-
-    return ret_index, ret_k_index
+    record[index][mask] = min_dist
+    q.append((index, mask, min_dist))
 
 
 def shop(n, k, centers, roads):
@@ -58,6 +37,11 @@ def shop(n, k, centers, roads):
     # Write your code here
     # keep track the distance and the fish type combinations so far for each node
     record = [[sys.maxsize] * (2**k) for i in range(n)]
+    roads_ =[[] for i in range(n + 1)]
+
+    for r in roads:
+        roads_[r[0]].append((r[1], r[2]))
+        roads_[r[1]].append((r[0], r[2]))
 
     center_fish_types = []
     for c in centers:
@@ -75,19 +59,19 @@ def shop(n, k, centers, roads):
     record[0][center_fish_types[0]] = 0
     # find_closest_with_road is going to check if there is any more
     # node to update
-    while True:
-        node_index, mask = find_closest_with_road(record, roads, center_fish_types)
-        if node_index == -1:
-            break
-        rds = [r for r in roads if r[0] == node_index + 1 or r[1] == node_index + 1]
+    q = deque([(0, center_fish_types[0], 0)])
+    while len(q) > 0:
+        # node_index is 0 based
+        sz = len(q)
+        node_index, mask, dis = q.popleft()
+        rds = roads_[node_index + 1]
 
         for r in rds:
             # update a node this can reach
-            a_node = r[0] if r[1] == node_index + 1 else r[1]
+            a_node = r[0]
             current_center_mask = center_fish_types[a_node - 1]
             next_mask = mask | current_center_mask
-            record[a_node - 1][next_mask] = min(record[a_node - 1][next_mask], record[node_index][mask] + r[2])
-
+            add_to_queue(q, record, a_node - 1, next_mask, dis + r[1])
 
     best_time = sys.maxsize
     for i in range(len(record[0])):

@@ -263,3 +263,13 @@ the cost is lower than the ```lowerst cost``` of it so far. If so
 update ```lowest cost``` of it and add it to the queue.
 
 Python [code](jack_goes_to_rapture.py)
+
+### 2.10 Journey to the Moon
+This [problme](https://www.hackerrank.com/challenges/journey-to-the-moon/problem) can 
+be solved using the Union and Find algorithm.
+
+At the end all the node linked together belong to the 
+same country. 
+
+Python [code](journey_to_the_moon.py)
+
