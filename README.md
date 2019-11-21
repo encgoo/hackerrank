@@ -25,7 +25,7 @@ Contains a [summary](Graph/README.md) of the following algorithms:
 * DFS (in-order, pre-order, post-order)
 * BFS
 
-10 medium problems can be found [here](Graph)
+11 medium problems can be found [here](Graph)
 
 ## &#x1F4D7;Greedy
 5 (all) medium problems [here](Greedy)
