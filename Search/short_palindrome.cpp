@@ -25,9 +25,6 @@ unsigned long int shortPalindrome(string s) {
     for (unsigned long int  i = 0; i < sz; ++i){
         char c = s[i];
         count = (count + three_chars[c - 'a'])%mod;
-        if (count < 0){
-            printf("%ld", three_chars[c - 'a']);
-        }
         for (int j = 0; j < 26; ++j){
             three_chars[j] = (three_chars[j] + two_chars[j][c - 'a'])%mod;
         }
