@@ -36,3 +36,24 @@ for all the rest because m*n is too big.
 overlap.
 
 Python [code](gridland_metro.py)
+
+## 6 Pairs
+For this [problem](https://www.hackerrank.com/challenges/pairs/problem) the
+brute force approach will be O(N<sup>2</sup>).
+
+To optimize the solution, we can sort the list/vector first, then for
+each element ```v``` in the list/vector, we just need to search up 
+to ```v + k```. Then it is more like O(N*k).
+
+C++ [code](pairs.cpp)
+
+## 7 Short Palindrome
+For this [problem](https://www.hackerrank.com/challenges/short-palindrome/problem) 
+there are errors in the given framework for C++ code.
+The function to be completed was declared as:
+```int shortPalindrome(string s)```
+However, the answer is supposed to be modulo (10<sup>9</sup> + 7). So the answer 
+can be potentially as big as ```(10<sup>9</sup> + 7) - 1```, which is too big to
+be stored in an ```int```. Need to change it to ```unsigned long int```.
+
+C++ [code]()
