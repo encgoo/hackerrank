@@ -57,3 +57,11 @@ can be potentially as big as ```(10<sup>9</sup> + 7) - 1```, which is too big to
 be stored in an ```int```. Need to change it to ```unsigned long int```.
 
 C++ [code]()
+
+## 8 Cut the Tree
+Just use DFS to traverse the tree. Assume node 0 as the root.
+
+Note for python code, since the DFS could be pretty deep when n is big, use
+```sys.setrecursionlimit(1000000)```.
+
+Python [code](cut_the_tree.py)
