@@ -37,7 +37,7 @@ Contains a [summary](Graph/README.md) of the following algorithms:
 3 medium problems [here](Recursion)
 
 ## &#x1F4D7;Search
-7 medium problems [here](Search)
+8 medium problems [here](Search)
 
 ## &#x1F4D7;Sort
 Check the summary of the following 5 basic sorting 
