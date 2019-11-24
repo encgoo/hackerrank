@@ -1,6 +1,8 @@
 # Implementation
 
 ## Tricks
+
+### Accumulator for any pair
 If there is a list of integer like
 ```lst = [1,2,3,4,5,6,7,8]```, pick any two, multiply them. Then sum up all the multiplcation
 result.
@@ -20,6 +22,12 @@ acc = 0
 for i in lst:
     res += i * acc
     acc += i
+```
+### C++ sort an array
+Use ```#include <algorithm>```, then 
+```
+int an_array[100] = {....};
+std::sort(an_array, an_array + 100);
 ```
         
 ## Examples
