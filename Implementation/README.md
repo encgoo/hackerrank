@@ -43,3 +43,9 @@ this C++ [code](the_grid_search.cpp)
 ### Ema's Supercomputer
 This [problem](https://www.hackerrank.com/challenges/two-pluses/problem) can be solved by
 this python [code](emas_supercomputer.py)
+
+### Organizing Containers of Balls
+The keypoint for this [problem](https://www.hackerrank.com/challenges/organizing-containers-of-balls/copy-from/128756445) 
+is that when you swap balls, the number of balls in each container remains the same. 
+
+C++ [code](organizing_containers_of_balls.cpp)
