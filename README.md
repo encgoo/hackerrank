@@ -31,7 +31,7 @@ Contains a [summary](Graph/README.md) of the following algorithms:
 5 (all) medium problems [here](Greedy)
 
 ## &#x1F4D7;Implementation
-13 medium problems [here](Implementation)
+14 medium problems [here](Implementation)
 
 ## &#x1F4D7;Recursion
 3 medium problems [here](Recursion)
