@@ -57,3 +57,9 @@ The keypoint for this [problem](https://www.hackerrank.com/challenges/organizing
 is that when you swap balls, the number of balls in each container remains the same. 
 
 C++ [code](organizing_containers_of_balls.cpp)
+
+### Queen's Attack II
+The logic for this [problem](https://www.hackerrank.com/challenges/queens-attack-2/problem). The
+only tricky part is counting for the diagonal moves. 
+
+Python [code](queens_attack.py)
