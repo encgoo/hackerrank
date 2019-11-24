@@ -5,6 +5,22 @@ Useful tricks:
 be used to figure out how many swaps/insertions needed for sorting a given
 list.
 
+# Tricks
+## Meet in the middle
+An interesting trick that can be explained by a very simple problem.
+
+_Given 4 lists (same length) of integers, pick one from each list, and count how many 
+quadruples sum up to 0._
+
+A brute force approach is very straightforward. Use 4 for-loops to get
+all the possible combination. This is an O(N<sup>4</sup>) approach.
+
+To improve the performance (with high usage of memory), go though
+two for-loops first, and cache the results. Then go though the other 
+two for-loops when checking against the cached results.
+
+Python [example](meet_in_the_middle.py)
+
 # Examples
 
 ## 1. Hackerland radio transmitters
@@ -56,7 +72,7 @@ However, the answer is supposed to be modulo (10<sup>9</sup> + 7). So the answer
 can be potentially as big as ```(10<sup>9</sup> + 7) - 1```, which is too big to
 be stored in an ```int```. Need to change it to ```unsigned long int```.
 
-C++ [code]()
+C++ [code](short_palindrome.cpp)
 
 ## 8 Cut the Tree
 Just use DFS to traverse the tree. Assume node 0 as the root.
@@ -65,3 +81,10 @@ Note for python code, since the DFS could be pretty deep when n is big, use
 ```sys.setrecursionlimit(1000000)```.
 
 Python [code](cut_the_tree.py)
+
+## 9 Beautiful Quadruples
+This [problem](https://www.hackerrank.com/challenges/xor-quadruples/problem)
+is solved by using "meet in the middle technique". So handle
+a and b first. Then merge the result when handling c and d.
+
+Python [code](beautiful_quadruples.py)
