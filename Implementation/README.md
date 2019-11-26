@@ -63,3 +63,10 @@ The logic for this [problem](https://www.hackerrank.com/challenges/queens-attack
 only tricky part is counting for the diagonal moves. 
 
 Python [code](queens_attack.py)
+
+### The Bomberman Game
+The [problem](https://www.hackerrank.com/challenges/bomber-man/problem)
+can be solved by using the Visitor design pattern, since several
+methods have to traverse the grid.
+
+C++ [code](the_bomberman_game.cpp)
