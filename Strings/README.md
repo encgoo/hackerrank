@@ -25,8 +25,8 @@ Python [code](sherlock_and_valid_string.py)
 Some points about this [problem](https://www.hackerrank.com/challenges/common-child/problem)
 * A normal approach using DP creates a 2D array of size=s1.size() to store
 the information. But when ```s1.size()``` is as big as 5000, this causes memory issue for C++ code.
-So somehow saft guard has memory limitation of 100mb? It shows as
-a segmentation error. The trick is to use only 2 arrays of 5000, instead of
+So somehow the safe guard has memory limitation smaller than 100mb? It shows as
+a segmentation error when accessing this array, not when creating this array (quite misleading). The trick is to use only 2 arrays of 5000, instead of
 5000 array of 5000.
 * The performance validator is unfair for python code here. The exact
 same [implementation](common_child.py) in python has timing issue
