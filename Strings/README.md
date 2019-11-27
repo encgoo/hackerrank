@@ -41,3 +41,7 @@ same [implementation](common_child.py) in python has timing issue
 for Test 9, 11, 12, 13.
 * This C++ [code](common_child.cpp) works.
 
+### Highest Value Palindrome
+This [problem](https://www.hackerrank.com/challenges/richie-rich/problem) can
+be solved by C++ [code](highest_value_palindrome.cpp) 
+
