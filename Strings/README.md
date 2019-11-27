@@ -20,3 +20,16 @@ This [problem](https://www.hackerrank.com/challenges/sherlock-and-valid-string/p
 by solved by using char_count mentioned before in the tricks. 
 
 Python [code](sherlock_and_valid_string.py)
+
+### Common Child
+Some points about this [problem](https://www.hackerrank.com/challenges/common-child/problem)
+* A normal approach using DP creates a 2D array of size=s1.size() to store
+the information. But when ```s1.size()``` is as big as 5000, this causes memory issue for C++ code.
+So somehow saft guard has memory limitation of 100mb? It shows as
+a segmentation error. The trick is to use only 2 arrays of 5000, instead of
+5000 array of 5000.
+* The performance validator is unfair for python code here. The exact
+same [implementation](common_child.py) in python has timing issue
+for Test 9, 11, 12, 13.
+* This C++ [code](common_child.cpp) works.
+
