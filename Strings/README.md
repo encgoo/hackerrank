@@ -5,6 +5,14 @@ Several useful tricks of python
 * Use list(string) to convert a string into list of chars. ''.join(list) converts it back.
 * ord(char) and chr(int) to convert between char and int
 * Use char_count = [0]*26 to quickly count chars. Useful for anagrams
+* for C++, this makes a copy of an array
+```
+#include <algorithm>
+#include <iterator>
+using namespace std;
+copy(begin(source_array), end(source_array), begin(destination_array));
+```
+See Common Child for example.
 
 ## Examples
 ### Bear and Steady Gene
