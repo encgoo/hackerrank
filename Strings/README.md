@@ -45,3 +45,11 @@ for Test 9, 11, 12, 13.
 This [problem](https://www.hackerrank.com/challenges/richie-rich/problem) can
 be solved by C++ [code](highest_value_palindrome.cpp) 
 
+### Maximum Palindrome
+Two steps for this [problem](https://www.hackerrank.com/challenges/maximum-palindromes/problem):
+* Because the order is not important, so we use a char_count list
+to collect the count for each char. This is an easy one.
+* Then we need to use combination to compute the result. This is
+the tough step because it is not a programming trick, but a math trick.
+
+Python [code](maximum_palindromes.py)
