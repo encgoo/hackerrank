@@ -51,4 +51,4 @@ algorithms implemented [there](Sort/sort.py):
 3 (all) medium problems can be found [here](Sort).
 
 ## &#x1F4D7;String
-5 medium problems [here](Strings)
+6 (all) medium problems [here](Strings)
