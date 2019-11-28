@@ -49,7 +49,9 @@ be solved by C++ [code](highest_value_palindrome.cpp)
 Two steps for this [problem](https://www.hackerrank.com/challenges/maximum-palindromes/problem):
 * Because the order is not important, so we use a char_count list
 to collect the count for each char. This is an easy one.
-* Then we need to use combination to compute the result. This is
-the tough step because it is not a programming trick, but a math trick.
+* Then we need to use combination to compute the result. The result is C<sup>n</sup><sub>total</sub>xC<sup>l</sup><sub>total-n</sub>x..., where total is the total count of 
+chars, and n, and l are the count of each char. This is
+the tough step because total, n, and l can be hugh. it is not a programming trick, but a math trick about 
+how to compute modulo combination using modulo inverse.
 
 Python [code](maximum_palindromes.py)
