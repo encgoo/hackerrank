@@ -88,3 +88,10 @@ is solved by using "meet in the middle technique". So handle
 a and b first. Then merge the result when handling c and d.
 
 Python [code](beautiful_quadruples.py)
+
+## 10 KnightL on a Chessboard
+This [problem](https://www.hackerrank.com/challenges/knightl-on-chessboard/problem) can 
+be solved by using Dijkstra algorithm. Use a deque and a visited matrix, append all the possible 
+next step into the deque.
+
+Pythn [code]()
