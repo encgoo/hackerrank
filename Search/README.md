@@ -94,4 +94,20 @@ This [problem](https://www.hackerrank.com/challenges/knightl-on-chessboard/probl
 be solved by using Dijkstra algorithm. Use a deque and a visited matrix, append all the possible 
 next step into the deque.
 
-Pythn [code]()
+Pythn [code](knightl_on_a_chessboard.py)
+
+## 11 Red Knight's Shortest Path
+This [problem](https://www.hackerrank.com/challenges/red-knights-shortest-path/problem) is very
+similar to the one above. Again we are going to use Dijkstra algorithm to solve it.
+
+The only different here is that we need to print out the path. So we need to 
+store the steps along the path. 
+
+We use a tree structure to store the path. At each cell, there are at most 6 possible
+next moves, each of them is a child node of the current node.
+
+We stop when we find the end cell, and we have the end node. We need to trace back to 
+the root node. So a parent does not need to know its children. Each child needs to 
+remember its parent. 
+
+Python [code](red_knights_shortest_path.py)
