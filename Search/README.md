@@ -92,9 +92,9 @@ Python [code](beautiful_quadruples.py)
 ## 10 KnightL on a Chessboard
 This [problem](https://www.hackerrank.com/challenges/knightl-on-chessboard/problem) can 
 be solved by using Dijkstra algorithm. Use a deque and a visited matrix, append all the possible 
-next step into the deque.
+next steps into the deque.
 
-Pythn [code](knightl_on_a_chessboard.py)
+Python [code](knightl_on_a_chessboard.py)
 
 ## 11 Red Knight's Shortest Path
 This [problem](https://www.hackerrank.com/challenges/red-knights-shortest-path/problem) is very
