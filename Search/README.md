@@ -111,3 +111,17 @@ the root node. So a parent does not need to know its children. Each child needs 
 remember its parent. 
 
 Python [code](red_knights_shortest_path.py)
+
+## 12 Gena Playing Hanoi
+This [problem](https://www.hackerrank.com/challenges/gena/problem) needs to be solved 
+by using BFS search. 
+
+Use a deque to store the next steps (the lists for python or the vectors for C++). Since the rule
+for Hanoi allows reverse operation (if you can move from i rod to j rod, after that moving from j rod 
+back to i is also legal), we need to keep track the steps we went through. So keep a visited list. This list could be long, it must be very efficient to access it. 
+
+Note that there are only 4 rods, so each dics can be represented by 2 bits. There are at most 10 discs, so a step can be represented by integer ```1<<20```. 
+So visited is a list of boolean with size of ```1<<20```.
+
+Again, the performance evaluation of handerrank is unfair for python implementation. The 
+same approach implemented in [python](gena_playing_hanoi.py) was unable to finish several tests within the time limit, while the [C++](gena_playing_hanoi.cpp) can finish all.
