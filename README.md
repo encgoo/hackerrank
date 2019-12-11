@@ -34,7 +34,7 @@ Contains a [summary](Graph/README.md) of the following algorithms:
 16 (all) medium problems [here](Implementation)
 
 ## &#x1F4D7;Recursion
-3 medium problems [here](Recursion)
+4 medium problems [here](Recursion)
 
 ## &#x1F4D7;Search
 12 (all) medium problems [here](Search)
