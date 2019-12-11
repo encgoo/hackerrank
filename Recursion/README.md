@@ -5,12 +5,12 @@ Pay attention to when/how to stop the recursion.
 
 ## Examples
 
-### Power Sum
+### 1. Power Sum
 This [problem](https://www.hackerrank.com/challenges/the-power-sum/problem)
 is a straightforward application of recursion.
 Python [code](power_sum.py)
 
-### Crossword Puzzle
+### 2. Crossword Puzzle
 The key steps for this [problem](https://www.hackerrank.com/challenges/crossword-puzzle/problem):
 * Figure out all the empty/available spaces using recursion, with location
 of the first cell, length, and orientation
@@ -19,8 +19,19 @@ the words we fill in don't have conflict.
 
 Python [code](crossword_puzzle.com.py)
 
-### Recursive Digit Sum
+### 3. Recursive Digit Sum
 This [problem](https://www.hackerrank.com/challenges/recursive-digit-sum/problem)
 is quite straightforward.
 
 Python [code](recursive_digit_sum.py)
+
+### 4. Password Cracker
+This [problem](https://www.hackerrank.com/challenges/password-cracker/problem) 
+can be solved by recursion on moving an index forward. 
+Because different paths might re-check the same i, so
+use an array ```checked = [False]*len(loginAttempt)``` to store the information
+
+One more point, default python recursion limit is only 5000. Need to 
+increase it to pass all the tests.
+
+Python [code](password_cracker.py)
