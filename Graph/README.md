@@ -273,3 +273,44 @@ same country.
 
 Python [code](journey_to_the_moon.py)
 
+### 2.11 Synchronous-shopping
+An interesting [problem]](https://www.hackerrank.com/challenges/synchronous-shopping/problem) that can be
+solved by a variance of BFS. 
+
+In normal BFS, an array is used to keep check whether
+a node has bee visited. So it just store a 
+boolean. Once visited, we don't need to visited again.
+
+But here because of the fish type being carried, a cat 
+needs to re-visit a center(node). Each time, a cat can bring back different combination of fishes,
+so the array ```visited``` is extended to a 2D array ```record```.
+For each center, now we store different combination of fishes. There
+are 10 different kinds of fishes, so there are ```2**10 = 1024``` different
+combination of fishes. This 2D array stores the weight for each center for a particular 
+fish combination.
+
+Again, we use a deque to keep the node we just visited. We ned to keep the weight 
+as well. So the deque store a struct for C++ or a tuple for
+python.
+
+When we take a node/center from the deque, we check the roads connected to this 
+center/node. Then we try to propagate the current fish types from this node
+to the potential next node. 
+
+Now the key point, we need to check if the fish combination for the potential dest is already
+in the  record. If so, this fish combination has been propagated to
+this dest already, then we don't add this to the deque. If not, then we add to the
+deque. The while loop will stop once all the (possible) combinations have 
+been propagated around the whole graph.
+
+What does it mean by two cats then? At the end the record for the last center stores the weight
+for different fish combination. So we just need to check each pair of combinations. 
+If a pair of fish combinations cover all the fish types, then this pair represents two 
+(potential) paths for two cats to take. The weight is then the bigger of those two
+weights.
+
+Again, the performance validator is unfair to python. The same approach in [python](synchronous_shopping.py)]
+could not finish all tests within given time limit. But the C++ [implementation](synchronous_shopping.cpp) 
+works fine.
+
+
