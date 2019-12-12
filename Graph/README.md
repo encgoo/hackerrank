@@ -274,7 +274,7 @@ same country.
 Python [code](journey_to_the_moon.py)
 
 ### 2.11 Synchronous-shopping
-An interesting [problem]](https://www.hackerrank.com/challenges/synchronous-shopping/problem) that can be
+An interesting [problem](https://www.hackerrank.com/challenges/synchronous-shopping/problem) that can be
 solved by a variance of BFS. 
 
 In normal BFS, an array is used to keep check whether
