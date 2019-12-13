@@ -197,7 +197,7 @@ We just need to build this list from right to left.
 Python [code](bricks_game.py)
 
 ### 2.11 Stock Maximize
-The implementation for this [problem](https://www.hackerrank.com/challenges/stockmax/problem) is very 
+The implementation for this [problem](https://www.hackerrank.com/challenges/stockmax/problem) is 
 surprisingly simple, once you figure out how to do it.
 
 It is easier to understand how it work if we run through the price list from front to the end. The approach is
