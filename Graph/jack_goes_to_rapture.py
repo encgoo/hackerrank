@@ -55,6 +55,21 @@ def getCost(g_nodes, g_from, g_to, g_weight):
         print("NO PATH EXISTS")
 
 if __name__ == '__main__':
+
+    infile = open("jgtr.txt", "r")
+
+    g_nodes, g_edges = map(int, infile.readline().rstrip().split())
+
+    g_from = [0] * g_edges
+    g_to = [0] * g_edges
+    g_weight = [0] * g_edges
+
+    for i in range(g_edges):
+        g_from[i], g_to[i], g_weight[i] = map(int, infile.readline().rstrip().split())
+
+    getCost(g_nodes, g_from, g_to, g_weight)
+
+    """
     g_nodes, g_edges = map(int, input().rstrip().split())
 
     g_from = [0] * g_edges
@@ -65,3 +80,4 @@ if __name__ == '__main__':
         g_from[i], g_to[i], g_weight[i] = map(int, input().rstrip().split())
 
     getCost(g_nodes, g_from, g_to, g_weight)
+    """

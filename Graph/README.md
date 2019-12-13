@@ -7,13 +7,17 @@ A list to storage linked parent for nodes. The task here
 is to build this list using the given edges.
 ![union_find](images/Union_find.png)
 
-To do so, two methods are needed normally.
+Initialize a list (of size of node count), and initialize to -1. Here
+-1 means it is not linked to anything. Call it ```linked```. If ```linked[i]==-1```, then node
+i is a currently a root. Initialize everything to -1 means all nodes start as roots. 
+
+To generate this list, two methods are needed normally.
 ##### 1.1.2 Find
-Given an edge, we want to if the nodes of both end are in the same 
+Given an edge, we want to check if the nodes of both ends of this edge are in the same 
 tree (like node 3 and 5 above). This method takes a node and 
 find its root. 
 It can be a recursive function or use while loop to find 
-parent until it is sys.maxsize. 
+parent until it is -1. 
 
 ##### 1.1.3 Union
 This method united two roots. Just change one root to point
@@ -40,7 +44,7 @@ The second list (min_dis) stores the minimum distance (so far) to the start node
 Find the node with the minimum dis to start, provided it is 
 not visited. 
 
-#### #1.2.1.3 How it works
+#### 1.2.1.3 How it works
 First pick a start node (or use the given one).
 ![Dijkstr](images/Dijkstra.png)
 
@@ -312,9 +316,3 @@ weights.
 Again, the performance validator is unfair to python. The same approach in [python](synchronous_shopping.py)]
 could not finish all tests within given time limit. But the C++ [implementation](synchronous_shopping.cpp) 
 works fine.
-
-##  2.12 Jack goes to Rapture
-This [problem]](https://www.hackerrank.com/challenges/jack-goes-to-rapture/problem) can be solved by
-BFS and Dijkstra algorithm.
-
-Python [code](jack_goes_to_rapture.py)
