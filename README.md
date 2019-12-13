@@ -11,7 +11,7 @@ Mainly focus on medium and some hard problems
 2 medium problems [here](ConstructiveAlgorithms)
 
 ## &#x1F4D7;Dynamic Programming
-10 medium problems can be found [here](DynamicProgramming)
+11 medium problems can be found [here](DynamicProgramming)
 
 ## &#x1F4D7;Game Theory
 1 medium problem [here](GameTheory)
