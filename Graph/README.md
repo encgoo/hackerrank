@@ -313,4 +313,8 @@ Again, the performance validator is unfair to python. The same approach in [pyth
 could not finish all tests within given time limit. But the C++ [implementation](synchronous_shopping.cpp) 
 works fine.
 
+##  2.12 Jack goes to Rapture
+This [problem]](https://www.hackerrank.com/challenges/jack-goes-to-rapture/problem) can be solved by
+BFS and Dijkstra algorithm.
 
+Python [code](jack_goes_to_rapture.py)

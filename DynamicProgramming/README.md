@@ -195,3 +195,26 @@ he shall choose to remove 3 bricks, and he will eventually get a score of 9.
 We just need to build this list from right to left.
 
 Python [code](bricks_game.py)
+
+### 2.11 Stock Maximize
+The implementation for this [problem](https://www.hackerrank.com/challenges/stockmax/problem) is very 
+surprisingly simple, once you figure out how to do it.
+
+It is easier to understand how it work if we run through the price list from front to the end. The approach is
+* Find the peak of the whole price list. (say 10th day)
+* Buy one stock everyday before that, and sell everything at the peak day.
+* Then start fresh from there (say 11th day), and find the (next) peak from there.
+* Repeat step 2.
+* ...
+
+This approach will work, but there are repeated subproblems, because we need to repeatly compute max for a list.
+For the worse case, this can be O(N<sup>2</sup>). The reason is that we don't know the next peak.
+
+The other approach is back up from the end to the front. 
+* Set the current max ```cur_max``` to be the last one.
+* run backward through the list. If the price is smaller than ```cur_max```, accumulate ```cur_max - cur_price``` to profit
+* If the price is higher than ```cur_max```, don't update profit, just update ```cur_max```
+
+This is then an O(N) solution.
+
+Python [code](stock_maximize.py)
