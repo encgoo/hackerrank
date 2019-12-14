@@ -35,3 +35,11 @@ One more point, default python recursion limit is only 5000. Need to
 increase it to pass all the tests.
 
 Python [code](password_cracker.py)
+
+### 5. Stone Division, Revisited
+This [problem](https://www.hackerrank.com/challenges/stone-division-2/problem) can be 
+solved by straightforward recusion. But there are repeated subproblems.
+
+The DP approach uses straightforward memoization. So this belongs more to the DP section.
+
+Python [code](stone_division_2.py)
