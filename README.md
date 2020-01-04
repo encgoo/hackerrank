@@ -9,7 +9,9 @@ Mainly focus on medium and some hard problems
 
 ## &#x1F4D7;Constructive Algorithm
 2 medium problems [here](ConstructiveAlgorithms)
-2 medium problems can be found [here](DynamicProgramming)
+
+## &#x1F4D7;Dynamic Programming
+12 medium problems can be found [here](DynamicProgramming)
 
 ## &#x1F4D7;Game Theory
 1 medium problem [here](GameTheory)
