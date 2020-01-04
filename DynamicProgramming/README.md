@@ -222,3 +222,7 @@ Python [code](stock_maximize.py)
 ### 2.12 Construct the Array
 This [problem](https://www.hackerrank.com/challenges/construct-the-array/problem) can be solved by
 the python [code](construct_the_array.py).
+
+### 2.13 Interval Selection
+This [problem](https://www.hackerrank.com/challenges/interval-selection/problem) can be sloved by
+this python [code](interval_selection.py) 
