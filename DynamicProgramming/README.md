@@ -218,3 +218,7 @@ The other approach is back up from the end to the front.
 This is then an O(N) solution.
 
 Python [code](stock_maximize.py)
+
+### 2.12 Construct the Array
+This [problem](https://www.hackerrank.com/challenges/construct-the-array/problem) can be solved by
+the python [code](construct_the_array.py).
