@@ -226,3 +226,8 @@ the python [code](construct_the_array.py).
 ### 2.13 Interval Selection
 This [problem](https://www.hackerrank.com/challenges/interval-selection/problem) can be sloved by
 this python [code](interval_selection.py) 
+
+### 2.14 Red John is Back
+This [problem](https://www.hackerrank.com/challenges/red-john-is-back/problem) is a typical 
+combination problem. 
+Python [code](red_john_is_back.py)
