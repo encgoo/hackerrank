@@ -12,3 +12,9 @@ This [problem](https://www.hackerrank.com/challenges/inherited-code/problem) is 
 subclassing std::exception. 
 
 [C++ code](inherited_code.cpp)
+
+## Exceptional Server
+This [problem](https://www.hackerrank.com/challenges/exceptional-server/problem) is about
+C++ exception handleing.
+
+[C++ code](exceptional_server.cpp)
