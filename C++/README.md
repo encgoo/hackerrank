@@ -6,3 +6,9 @@ This [problem](https://www.hackerrank.com/challenges/cpp-class-template-speciali
 about template. 
 
 [c++ code](cpp_class_template_specialization.cpp) can be found here.
+
+## Inherited Code
+This [problem](https://www.hackerrank.com/challenges/inherited-code/problem) is about
+subclassing std::exception. 
+
+[C++ code](inherited_code.cpp)
