@@ -14,7 +14,7 @@ The difference here is to cache the results of the repeated subproblems.
 
 ### 1.2 Tabulation
 This is a bottom up approach. Think of the problem from an induction perspective. 
-Build the solution from buttom up.
+Build the solution from bottom up.
 
 ## 2. Examples
 
@@ -231,3 +231,18 @@ this python [code](interval_selection.py)
 This [problem](https://www.hackerrank.com/challenges/red-john-is-back/problem) is a typical 
 combination problem. 
 Python [code](red_john_is_back.py)
+
+### 2.15 Mr K marsh
+This [problem](https://www.hackerrank.com/challenges/mr-k-marsh/problem?isFullScreen=true) can be
+[solved](MrKMarsh.py) using the Tabulation approach. 
+* A matrix of mxn is built first. Each element corresponds to a coordinate in the grid. It stores a tuple
+(a, b), with a being how far it can go to the right before hitting the boundary or a marsh, and
+b being how far it can go down. 
+* Then we need to scan all the coordinates of the grid to do this for each coordinate
+    * Use (a,b) of this coordinate to find the other three corners of the rect. 
+    * if it is a good rect (see the is_rect function) then we are done with this coordinate, because 
+this is the biggest possible one for this coordinate.
+    * if it is not, then we use a BFS to search each coordinate inside this rect.
+* The above approach shall get to all the possible rects. But here we are looking for
+the biggest one, so we store the _current_ biggest one. We can then quit out from the BFS when all the rects 
+we are going to search are smaller than the current biggest one. 
