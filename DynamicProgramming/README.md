@@ -246,3 +246,11 @@ this is the biggest possible one for this coordinate.
 * The above approach shall get to all the possible rects. But here we are looking for
 the biggest one, so we store the _current_ biggest one. We can then quit out from the BFS when all the rects 
 we are going to search are smaller than the current biggest one. 
+
+### 2.16 Travel around the world
+This [problem](https://www.hackerrank.com/challenges/travel-around-the-world/problem?isFullScreen=true) can be
+[solved](TravelAroundTheWorld.py) by using the Memorization approach.
+
+The key point here is that if we find a good station (which we can start with to travel around), then
+for the next station to check, we just need to make sure we can reach a (the closest) good station.
+So we memorize all the good stations.
