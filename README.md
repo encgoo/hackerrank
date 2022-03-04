@@ -14,7 +14,7 @@ Mainly focus on medium and some hard problems
 16 medium problems can be found [here](DynamicProgramming)
 
 ## &#x1F4D7;Game Theory
-1 medium problem [here](GameTheory)
+2 medium problems [here](GameTheory)
 
 ## &#x1F4D7;Graph
 Contains a [summary](Graph/README.md) of the following algorithms:
